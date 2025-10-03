@@ -17,21 +17,7 @@ function Home() {
         <Particle />
         <Container className="home-content">
           <Row className="align-items-center home-main-row">
-            <Col md={6} className="home-image-col">
-              <div className="home-image-container">
-                <div className="neon-circles">
-                  <div className="neon-circle circle-1"></div>
-                  <div className="neon-circle circle-2"></div>
-                  <div className="neon-circle circle-3"></div>
-                </div>
-                <img
-                  src={homeGirl}
-                  alt="Riya Mehta"
-                  className="home-girl-image"
-                />
-              </div>
-            </Col>
-
+            {/* Text Introduction Section - Shows first on mobile */}
             <Col md={6} className="home-text-col">
               <div className="home-content-wrapper">
                 <h2 className="home-greeting">
@@ -46,13 +32,58 @@ function Home() {
                   And I'm a <span className="home-type-wrapper"><Type /></span>
                 </h3>
 
-                <p className="home-description">
+                {/* Desktop: Description and Buttons stay here */}
+                <p className="home-description desktop-description">
                   A passionate Computer Science student at VIT Bhopal with a strong interest 
                   in building full-stack applications and a keen interest in open source contribution 
                   and AI in healthcare.
                 </p>
 
-                <div className="home-buttons">
+                <div className="home-buttons desktop-buttons">
+                  <button className="home-btn hire-btn">
+                    Let's Build
+                  </button>
+                  <button 
+                    className="home-btn contact-btn"
+                    onClick={() => {
+                      console.log('Contact button clicked!');
+                      setIsContactModalOpen(true);
+                    }}
+                  >
+                    Contact Me
+                  </button>
+                </div>
+              </div>
+            </Col>
+
+            {/* Image Section - Shows second on mobile */}
+            <Col md={6} className="home-image-col">
+              <div className="home-image-container">
+                <div className="neon-circles">
+                  <div className="neon-circle circle-1"></div>
+                  <div className="neon-circle circle-2"></div>
+                  <div className="neon-circle circle-3"></div>
+                </div>
+                <img
+                  src={homeGirl}
+                  alt="Riya Mehta"
+                  className="home-girl-image"
+                />
+              </div>
+            </Col>
+          </Row>
+
+          {/* Mobile: Description and Buttons Section - Shows last on mobile */}
+          <Row className="home-bottom-content mobile-bottom-content">
+            <Col md={12} className="home-description-col">
+              <div className="home-bottom-wrapper">
+                <p className="home-description mobile-description">
+                  A passionate Computer Science student at VIT Bhopal with a strong interest 
+                  in building full-stack applications and a keen interest in open source contribution 
+                  and AI in healthcare.
+                </p>
+
+                <div className="home-buttons mobile-buttons">
                   <button className="home-btn hire-btn">
                     Let's Build
                   </button>

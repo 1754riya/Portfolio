@@ -498,6 +498,42 @@ button:focus {
   box-shadow: 0 10px 25px rgba(199, 112, 240, 0.4);
 }
 
+/* === DESKTOP VS MOBILE CONTENT CONTROL === */
+
+/* Desktop: Hide mobile bottom content, show desktop content */
+@media (min-width: 769px) {
+  .mobile-bottom-content {
+    display: none !important;
+  }
+  
+  .desktop-description,
+  .desktop-buttons {
+    display: block !important;
+  }
+  
+  .mobile-description,
+  .mobile-buttons {
+    display: none !important;
+  }
+}
+
+/* Mobile: Hide desktop content, show mobile bottom content */
+@media (max-width: 768px) {
+  .desktop-description,
+  .desktop-buttons {
+    display: none !important;
+  }
+  
+  .mobile-description,
+  .mobile-buttons {
+    display: block !important;
+  }
+  
+  .mobile-bottom-content {
+    display: block !important;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .home-main-row {
@@ -2750,8 +2786,8 @@ button:focus {
 
   /* === HERO SECTION RESPONSIVE === */
   .home-section {
-    padding-top: 100px !important;
-    padding-bottom: 40px !important;
+    padding-top: 80px !important;
+    padding-bottom: 30px !important;
     min-height: 100vh !important;
   }
   
@@ -2763,28 +2799,52 @@ button:focus {
   .home-main-row {
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
-    min-height: calc(100vh - 140px) !important;
+    justify-content: flex-start !important;
+    margin-bottom: 2rem !important;
   }
   
   .home-text-col {
     order: 1 !important;
     text-align: center !important;
     padding: 0 !important;
-    margin-bottom: 3rem !important;
+    margin-bottom: 2rem !important;
     width: 100% !important;
   }
   
   .home-image-col {
     order: 2 !important;
     text-align: center !important;
-    margin-bottom: 3rem !important;
+    margin-bottom: 2rem !important;
     width: 100% !important;
   }
   
   .home-content-wrapper {
     padding: 0 20px !important;
     max-width: 100% !important;
+  }
+
+  /* === MOBILE BOTTOM SECTION FOR DESCRIPTION AND BUTTONS === */
+  .mobile-bottom-content {
+    margin-top: 1rem !important;
+  }
+  
+  .home-description-col {
+    text-align: center !important;
+    padding: 0 15px !important;
+  }
+  
+  .home-bottom-wrapper {
+    padding: 0 20px !important;
+    max-width: 100% !important;
+  }
+  
+  /* Mobile: Ensure proper stacking order */
+  .mobile-description {
+    order: 3 !important;
+  }
+  
+  .mobile-buttons {
+    order: 4 !important;
   }
 
   /* === TYPOGRAPHY SCALING === */
@@ -3032,8 +3092,8 @@ button:focus {
 @media (max-width: 480px) {
   /* === HERO SECTION - SMALL MOBILE === */
   .home-section {
-    padding-top: 80px !important;
-    padding-bottom: 30px !important;
+    padding-top: 70px !important;
+    padding-bottom: 20px !important;
   }
   
   .home-content {
@@ -3043,6 +3103,18 @@ button:focus {
   
   .home-content-wrapper {
     padding: 0 15px !important;
+  }
+
+  .home-bottom-wrapper {
+    padding: 0 15px !important;
+  }
+  
+  .home-text-col {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .home-image-col {
+    margin-bottom: 1.5rem !important;
   }
 
   /* === TYPOGRAPHY - SMALL MOBILE === */
@@ -3113,7 +3185,7 @@ button:focus {
 /* === EXTRA SMALL MOBILE DEVICES (320px - 375px) === */
 @media (max-width: 375px) {
   .home-section {
-    padding-top: 70px !important;
+    padding-top: 60px !important;
   }
   
   .home-content {
@@ -3123,6 +3195,18 @@ button:focus {
   
   .home-content-wrapper {
     padding: 0 10px !important;
+  }
+
+  .home-bottom-wrapper {
+    padding: 0 10px !important;
+  }
+  
+  .home-text-col {
+    margin-bottom: 1rem !important;
+  }
+  
+  .home-image-col {
+    margin-bottom: 1rem !important;
   }
 
   .home-greeting {
