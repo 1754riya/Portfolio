@@ -1,6 +1,6 @@
 <h2 align="center">
   Portfolio Website - v2.0<br/>
-  <a href="https://riyamehta.vercel.app/" target="_blank">riyamehta.tech</a>
+  <a href="https://riyamehta.vercel.app/" target="_blank">RiyaMehta.Tech</a>
 </h2>
 <div align="center">
   <img alt="Demo" src="./Images/readme-img1.png" />
@@ -27,7 +27,7 @@
 
 ## Built With
 
-My personal portfolio <a href="https://riyamehta.vercel.app/" target="_blank">riyamehta.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
+My personal portfolio <a href="https://riyamehta.vercel.app/" target="_blank">RiyaMehta.Tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
 
 This project was built using these technologies.
 
@@ -63,10 +63,15 @@ The page will reload if you make edits.
 ## Usage Instructions
 
 Open the project folder and Navigate to `/src/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
+You will find all the components used and information accordingly.
 
 ### Show your support
 
 Give a ⭐ if you like this website!
 
 <a href="https://www.buymeacoffee.com/1754riya" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+
+<div align="center">
+  <img alt="Demo" src="./Images/readme-img.png" />
+</div>
+
