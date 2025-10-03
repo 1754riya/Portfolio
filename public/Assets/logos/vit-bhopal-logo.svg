@@ -1,0 +1,6 @@
+<!-- This is a placeholder SVG for VIT Bhopal logo -->
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+  <rect width="40" height="40" rx="4" fill="#2d4739"/>
+  <text x="20" y="18" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle" font-weight="bold">VIT</text>
+  <text x="20" y="30" font-family="Arial, sans-serif" font-size="8" fill="#90cdf4" text-anchor="middle">Bhopal</text>
+</svg>
