@@ -2750,70 +2750,143 @@ button:focus {
 
   /* === HERO SECTION RESPONSIVE === */
   .home-section {
-    padding-top: 120px !important;
-    padding-bottom: 30px !important;
+    padding-top: 100px !important;
+    padding-bottom: 40px !important;
+    min-height: 100vh !important;
+  }
+  
+  .home-content {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
   
   .home-main-row {
-    flex-direction: column-reverse !important;
-  }
-  
-  .home-image-col {
-    order: 1 !important;
-    margin-bottom: 2rem !important;
-    text-align: center !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: calc(100vh - 140px) !important;
   }
   
   .home-text-col {
+    order: 1 !important;
+    text-align: center !important;
+    padding: 0 !important;
+    margin-bottom: 3rem !important;
+    width: 100% !important;
+  }
+  
+  .home-image-col {
     order: 2 !important;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    text-align: center !important;
+    margin-bottom: 3rem !important;
+    width: 100% !important;
   }
   
-  .home-girl-image {
-    width: 280px !important;
-    max-width: 90% !important;
-  }
-  
-  .neon-circles {
-    transform: scale(0.7) !important;
+  .home-content-wrapper {
+    padding: 0 20px !important;
+    max-width: 100% !important;
   }
 
   /* === TYPOGRAPHY SCALING === */
   .home-greeting {
-    font-size: 1.4rem !important;
-    margin-bottom: 8px !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 10px !important;
+    font-weight: 400 !important;
+    color: #fff !important;
   }
   
   .home-name {
-    font-size: 2.2rem !important;
-    margin-bottom: 12px !important;
+    font-size: 2.4rem !important;
+    margin-bottom: 15px !important;
     line-height: 1.2 !important;
+    font-weight: 700 !important;
+    background: linear-gradient(135deg, #c770f0 0%, #ffffff 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
   }
   
   .home-title {
-    font-size: 1.6rem !important;
-    margin-bottom: 20px !important;
+    font-size: 1.7rem !important;
+    margin-bottom: 25px !important;
+    line-height: 1.4 !important;
+    color: #fff !important;
+  }
+  
+  .home-type-wrapper {
+    color: #c770f0 !important;
   }
   
   .home-description {
-    font-size: 0.95rem !important;
-    line-height: 1.6 !important;
-    margin-bottom: 30px !important;
-    padding: 0 1rem !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 35px !important;
+    padding: 0 10px !important;
+    color: #cbd5e0 !important;
+    text-align: center !important;
+    max-width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* === IMAGE STYLING === */
+  .home-girl-image {
+    width: 300px !important;
+    max-width: 85% !important;
+    height: auto !important;
+    border-radius: 50% !important;
+    box-shadow: 0 0 50px rgba(199, 112, 240, 0.4) !important;
+  }
+  
+  .neon-circles {
+    transform: scale(0.8) !important;
   }
 
   /* === BUTTONS RESPONSIVE === */
   .home-buttons {
     flex-direction: column !important;
-    gap: 15px !important;
+    gap: 20px !important;
     align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 0 20px !important;
   }
   
   .home-btn {
-    width: 200px !important;
-    padding: 12px 20px !important;
-    font-size: 0.9rem !important;
+    width: 85% !important;
+    max-width: 280px !important;
+    padding: 15px 25px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    border-radius: 50px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .hire-btn {
+    background: linear-gradient(135deg, #c770f0, #9c27b0) !important;
+    border: none !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(199, 112, 240, 0.3) !important;
+  }
+  
+  .hire-btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(199, 112, 240, 0.4) !important;
+  }
+  
+  .contact-btn {
+    background: transparent !important;
+    border: 2px solid #c770f0 !important;
+    color: #c770f0 !important;
+  }
+  
+  .contact-btn:hover {
+    background: #c770f0 !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(199, 112, 240, 0.3) !important;
   }
 
   /* === ABOUT SECTION RESPONSIVE === */
@@ -2957,23 +3030,69 @@ button:focus {
    ============================================= */
 
 @media (max-width: 480px) {
+  /* === HERO SECTION - SMALL MOBILE === */
+  .home-section {
+    padding-top: 80px !important;
+    padding-bottom: 30px !important;
+  }
+  
+  .home-content {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  .home-content-wrapper {
+    padding: 0 15px !important;
+  }
+
+  /* === TYPOGRAPHY - SMALL MOBILE === */
+  .home-greeting {
+    font-size: 1.3rem !important;
+    margin-bottom: 8px !important;
+  }
+  
   .home-name {
-    font-size: 1.8rem !important;
+    font-size: 2rem !important;
+    margin-bottom: 12px !important;
   }
   
   .home-title {
-    font-size: 1.3rem !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 20px !important;
   }
   
+  .home-description {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 30px !important;
+    padding: 0 5px !important;
+    max-width: 95% !important;
+  }
+
+  /* === IMAGE - SMALL MOBILE === */
   .home-girl-image {
-    width: 240px !important;
+    width: 250px !important;
+    max-width: 80% !important;
+  }
+  
+  .neon-circles {
+    transform: scale(0.65) !important;
+  }
+
+  /* === BUTTONS - SMALL MOBILE === */
+  .home-buttons {
+    gap: 15px !important;
+    padding: 0 15px !important;
   }
   
   .home-btn {
-    width: 180px !important;
-    font-size: 0.85rem !important;
+    width: 90% !important;
+    max-width: 250px !important;
+    padding: 12px 20px !important;
+    font-size: 0.9rem !important;
   }
-  
+
+  /* === OTHER SECTIONS === */
   .project-heading {
     font-size: 1.5rem !important;
   }
@@ -2988,5 +3107,55 @@ button:focus {
   
   .about-main-img {
     max-width: 240px !important;
+  }
+}
+
+/* === EXTRA SMALL MOBILE DEVICES (320px - 375px) === */
+@media (max-width: 375px) {
+  .home-section {
+    padding-top: 70px !important;
+  }
+  
+  .home-content {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  
+  .home-content-wrapper {
+    padding: 0 10px !important;
+  }
+
+  .home-greeting {
+    font-size: 1.2rem !important;
+  }
+  
+  .home-name {
+    font-size: 1.8rem !important;
+    line-height: 1.1 !important;
+  }
+  
+  .home-title {
+    font-size: 1.3rem !important;
+  }
+  
+  .home-description {
+    font-size: 0.9rem !important;
+    padding: 0 !important;
+  }
+  
+  .home-girl-image {
+    width: 220px !important;
+    max-width: 75% !important;
+  }
+  
+  .neon-circles {
+    transform: scale(0.6) !important;
+  }
+  
+  .home-btn {
+    width: 95% !important;
+    max-width: 220px !important;
+    padding: 10px 18px !important;
+    font-size: 0.85rem !important;
   }
 }
