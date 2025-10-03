@@ -416,6 +416,9 @@ button:focus {
 .home-type-wrapper .Typewriter__wrapper {
   color: var(--imp-text-color) !important;
   font-weight: 600 !important;
+  text-align: center !important;
+  display: inline-block !important;
+  width: auto !important;
 }
 
 .home-description {
@@ -538,11 +541,21 @@ button:focus {
 
 /* Mobile: Hide desktop content, show mobile bottom content */
 @media (max-width: 768px) {
+  /* Hide ALL desktop content in the text column */
   .desktop-description,
   .desktop-buttons {
     display: none !important;
+    visibility: hidden !important;
   }
   
+  /* Also hide any description/buttons that might appear in text column */
+  .home-text-col .home-description,
+  .home-text-col .home-buttons {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  /* Only show mobile content below image */
   .mobile-description,
   .mobile-buttons {
     display: block !important;
@@ -576,6 +589,12 @@ button:focus {
   .home-section * {
     visibility: visible !important;
     opacity: 1 !important;
+  }
+  
+  /* Force hide any duplicate content above image */
+  .home-content-wrapper .home-description,
+  .home-content-wrapper .home-buttons {
+    display: none !important;
   }
 }
 
@@ -661,7 +680,11 @@ button:focus {
   .Typewriter__wrapper {
     font-size: 1.4em !important;
     font-weight: 500 !important;
-    position: absolute !important;
+    position: static !important;
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto !important;
   }
   .Typewriter__cursor {
     display: none !important;
@@ -2982,6 +3005,9 @@ button:focus {
     font-weight: 600 !important;
     margin-top: 8px !important;
     width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-content: center !important;
   }
   
   .home-description {
@@ -3259,6 +3285,15 @@ button:focus {
     visibility: visible !important;
   }
   
+  /* Ensure no duplicate content above image */
+  .home-text-col .home-description,
+  .home-text-col .home-buttons,
+  .desktop-description,
+  .desktop-buttons {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
   .home-text-col {
     margin-bottom: 1.5rem !important;
   }
@@ -3389,6 +3424,15 @@ button:focus {
     gap: 20px !important;
   }
   
+  /* Ensure no duplicate content above image */
+  .home-text-col .home-description,
+  .home-text-col .home-buttons,
+  .desktop-description,
+  .desktop-buttons {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
   .home-buttons {
     gap: 18px !important;
   }
@@ -3483,18 +3527,30 @@ button:focus {
 @media (max-width: 768px) {
   /* Ensure typewriter animation is properly centered and visible */
   .home-title .typewriter-text,
-  .home-type-wrapper .typewriter-text {
+  .home-type-wrapper .typewriter-text,
+  .home-type-wrapper * {
     text-align: center !important;
-    display: inline-block !important;
-    width: auto !important;
+    display: block !important;
+    width: 100% !important;
     visibility: visible !important;
     color: #c770f0 !important;
+    margin: 0 auto !important;
+    justify-content: center !important;
   }
   
   /* Fix for React Typed component */
   .typed-cursor {
     color: #c770f0 !important;
     visibility: visible !important;
+  }
+  
+  /* Ensure Type component is centered */
+  .home-type-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
   }
   
   /* Ensure proper visibility and layout */
@@ -3513,13 +3569,17 @@ button:focus {
   
   /* Type component specific fixes */
   .home-type-wrapper {
-    display: block !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     visibility: visible !important;
-    min-width: 100% !important;
+    width: 100% !important;
     text-align: center !important;
     font-weight: 600 !important;
     margin-top: 12px !important;
     line-height: 1.8 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
   
   /* Adjust for very long typed text */
