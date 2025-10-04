@@ -79,7 +79,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://discordapp.com/users/_riru_"
+                  href="https://discord.com/users/_riru_"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
